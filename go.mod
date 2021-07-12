@@ -1,4 +1,4 @@
-module nocalhost/remotecommand
+module github.com/nocalhost/remotecommand
 
 go 1.16
 
