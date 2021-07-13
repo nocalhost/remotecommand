@@ -27,6 +27,7 @@ import (
 	"k8s.io/apimachinery/pkg/util/httpstream"
 	"k8s.io/apimachinery/pkg/util/remotecommand"
 	restclient "k8s.io/client-go/rest"
+	clientgoremotecommand "k8s.io/client-go/tools/remotecommand"
 	spdy "k8s.io/client-go/transport/spdy"
 )
 
@@ -38,7 +39,7 @@ type StreamOptions struct {
 	Stdout            io.Writer
 	Stderr            io.Writer
 	Tty               bool
-	TerminalSizeQueue TerminalSizeQueue
+	TerminalSizeQueue clientgoremotecommand.TerminalSizeQueue
 }
 
 // Executor is an interface for transporting shell-style streams.
